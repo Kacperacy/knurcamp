@@ -32,10 +32,10 @@ const uczniowe = [
 function rozwiazanie() {
   let uczniowieLen = uczniowe.length;
   for (let i = 0; i < uczniowieLen; i++) {
-    nowyUczen = Object.assign({}, uczniowe[i]);
-    nowyUczen.imie = nowyUczen.imie + " Zenon";
-    nowyUczen.wiek--;
-    uczniowe.push(nowyUczen);
+    uczniowe.push({
+      wiek: uczniowe[i].wiek - 1,
+      imie: uczniowe[i].imie + " Zenon",
+    });
   }
 }
 
