@@ -30,14 +30,13 @@ const uczniowe = [
 ];
 
 function rozwiazanie() {
-  nowiUczniowie = [];
-  for (const uczen of uczniowe) {
-    nowyUczen = Object.assign({}, uczen);
+  let uczniowieLen = uczniowe.length;
+  for (let i = 0; i < uczniowieLen; i++) {
+    nowyUczen = Object.assign({}, uczniowe[i]);
     nowyUczen.imie = nowyUczen.imie + " Zenon";
     nowyUczen.wiek--;
-    nowiUczniowie.push(nowyUczen);
+    uczniowe.push(nowyUczen);
   }
-  uczniowe.push(...nowiUczniowie);
 }
 
 // NIE PATRZ TU OK
