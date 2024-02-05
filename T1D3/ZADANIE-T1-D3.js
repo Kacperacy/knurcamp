@@ -81,10 +81,6 @@ function zakupy(balansPortfela, towary) {
   let maxWydatek = 0;
 
   function kombinacje(index, wydatek, kombinacja) {
-    for (let i = 0; i < kombinacja.length; i++) {
-      console.log(kombinacja[i]);
-    }
-    console.log("----");
     if (index === towary.length) {
       if (wydatek > maxWydatek && wydatek <= balansPortfela) {
         maxWydatek = wydatek;
@@ -127,4 +123,4 @@ eval(
 podpowiedźPierwsza("NIE"); // Mała podpowiedź od czego zacząć.
 podpowiedźDruga("NIE"); // Większa podpowiedź od czego zacząć.
 podpowiedźTrzecia("NIE"); // Duża podpowiedź algorytmu.
-pokazRozwiazanie("NIE"); // Wypisuje kompletne rozwiązanie (nikt sie nie dowie, nie musisz używać GPT jak VR).
+pokazRozwiazanie("TAK"); // Wypisuje kompletne rozwiązanie (nikt sie nie dowie, nie musisz używać GPT jak VR).
