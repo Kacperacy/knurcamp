@@ -69,14 +69,40 @@
 function zakupy(balansPortfela, towary) {
   // TU ZACZNIJ (tę funkcje wywoła kod sprawdzający wyniki gdy uruchomisz program)
   // MIEJSCE NA TWÓJ KOD
-  towary.sort((a, b) => b.koszt - a.koszt);
-  for (const towar of towary) {
-    const ileMoznaKupic = Math.floor(balansPortfela / towar.koszt);
-    const ileKupimy = Math.min(ileMoznaKupic, towar.liczbaSztuk);
-    balansPortfela -= ileKupimy * towar.koszt;
+
+  // PART 1
+  // towary.sort((a, b) => b.koszt - a.koszt);
+  // for (const towar of towary) {
+  //   const ileMoznaKupic = Math.floor(balansPortfela / towar.koszt);
+  //   const ileKupimy = Math.min(ileMoznaKupic, towar.liczbaSztuk);
+  //   balansPortfela -= ileKupimy * towar.koszt;
+  // }
+
+  let maxWydatek = 0;
+
+  function kombinacje(index, wydatek, kombinacja) {
+    for (let i = 0; i < kombinacja.length; i++) {
+      console.log(kombinacja[i]);
+    }
+    console.log("----");
+    if (index === towary.length) {
+      if (wydatek > maxWydatek && wydatek <= balansPortfela) {
+        maxWydatek = wydatek;
+      }
+      return;
+    }
+    for (let i = 0; i <= towary[index].liczbaSztuk; i++) {
+      kombinacje(
+        index + 1,
+        wydatek + towary[index].koszt * i,
+        kombinacja.concat({ nazwa: towary[index].nazwa, liczba: i })
+      );
+    }
   }
 
-  return balansPortfela;
+  kombinacje(0, 0, []);
+
+  return balansPortfela - maxWydatek;
   // KONIEC MIEJSCA NA TWÓJ KOD
 }
 
