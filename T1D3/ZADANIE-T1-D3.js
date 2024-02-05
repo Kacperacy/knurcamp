@@ -123,4 +123,4 @@ eval(
 podpowiedźPierwsza("NIE"); // Mała podpowiedź od czego zacząć.
 podpowiedźDruga("NIE"); // Większa podpowiedź od czego zacząć.
 podpowiedźTrzecia("NIE"); // Duża podpowiedź algorytmu.
-pokazRozwiazanie("TAK"); // Wypisuje kompletne rozwiązanie (nikt sie nie dowie, nie musisz używać GPT jak VR).
+pokazRozwiazanie("NIE"); // Wypisuje kompletne rozwiązanie (nikt sie nie dowie, nie musisz używać GPT jak VR).
