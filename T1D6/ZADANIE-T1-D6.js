@@ -26,16 +26,7 @@
 // *** USTAWIENIA JĘZYKA MATERIAŁÓW ***
 const JĘZYK = "en"; // ustaw na "en" jeśli chcesz materiały po angielsku
 
-let token = "";
-const fs = require("fs");
-
-fs.readFile("token.json", "utf-8", (err, data) => {
-  if (err) {
-    console.log("Nie znaleziono pliku token.json");
-    return;
-  }
-  token = JSON.parse(data).token;
-});
+const token = require("../token.json").token;
 
 // *** USTAWIENIA TELEMETRII ***
 // Włącza albo wyłącza telemetrie.
