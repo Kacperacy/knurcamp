@@ -1,4 +1,4 @@
 # knurcamp
 
-## Notatki
+### Notatki
 - [wykład 3](/wyklady/wyklad3.md)
