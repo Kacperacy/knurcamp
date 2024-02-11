@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KNURCAMP</title>
+    <script>
+      // Zadanie 2
+      /*
+       function addImg(url) {
+         const img = document.createElement("img");
+         img.src = url;
+         img.width = 400;
+         img.height = 400;
+         document.body.appendChild(img);
+         return img;
+       }
+
+       const imgSrc = [
+         "https://media.discordapp.net/attachments/1029494873792974939/1206311936585629796/camphoto_684387517.jpg?ex=65db8c89&is=65c91789&hm=f725fade8713ed2519a059e29e3da4667580059f3a72817bdd17e0b7a4f17bff&=&format=webp&width=1042&height=1390",
+         "https://plus.unsplash.com/premium_photo-1674670904769-544b31893a15?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+         "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=2598&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+         "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+         "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=2097&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+         "https://plus.unsplash.com/premium_photo-1667682209935-b6c87cced668?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+         "https://images.unsplash.com/photo-1603064752734-4c48eff53d05?q=80&w=2576&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+       ];
+
+       const img = [];
+
+       addEventListener("DOMContentLoaded", () => {
+         let i = 0;
+         for (i = 0; i < 4; i++) {
+           img.push(addImg(imgSrc[i]));
+         }
+
+         setInterval(() => {
+           img[i % 4].src = imgSrc[i % 6];
+           i++;
+         }, 5000);
+       });
+       */
+
+      // Zadanie 3
+      /*
+      const div = [];
+
+      addEventListener("DOMContentLoaded", () => {
+        const button = document.getElementById("button");
+
+        function addDiv(number) {
+          const div = document.createElement("div");
+          div.innerHTML = `DIV ${number}`;
+          document.body.prepend(div);
+          return div;
+        }
+
+        button.addEventListener("click", () => {
+          div.push(addDiv(div.length + 1));
+        });
+      });
+      */
+
+      // Zadanie 4
+      const request = new XMLHttpRequest();
+      request.open(
+        "GET",
+        "https://api.open-meteo.com/v1/forecast?latitude=31.7619&longitude=106.4850&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m"
+      );
+      request.send();
+      request.onload = () => {
+        const data = JSON.parse(request.response);
+
+        const div = document.createElement("div");
+        div.innerHTML = `Temperatura: ${data.current.temperature_2m}${data.current_units.temperature_2m}`;
+        document.body.prepend(div);
+      };
+    </script>
+  </head>
+  <body>
+    <!-- <button id="button">DODAJ DIV</button> -->
+  </body>
+</html>
