@@ -17,7 +17,7 @@
 |Dzień|Zadanie|Wykład|
 |---|---|---|
 |1|   |[wykład 3](/wyklady/wyklad3.md)|
-|2|   |   |
+|2|   |[wykład 4](/wyklady/knurcamp/index.html)|
 |3|   |   |
 |4|   |   |
 |5|   |   |
