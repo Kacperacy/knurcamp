@@ -1,13 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>Zadanko</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div class="left">
+      <p>Burgor</p>
+      <img
+        src="https://t4.ftcdn.net/jpg/02/74/99/01/360_F_274990113_ffVRBygLkLCZAATF9lWymzE6bItMVuH1.jpg"
+      />
+      <div class="ipt">
+        <p>Szerokość:</p>
+        <input id="width" type="number" />
+      </div>
+      <button id="button">Zmień wiekość burgor</button>
+    </div>
+    <div class="right">
+      <button id="cytaty">Wygeneruj losowe cytaty</button>
+      <button id="usun">Usuń cytaty</button>
+    </div>
+
+    <script>
+      const button = document.getElementById("button");
+      const width = document.getElementById("width");
+
+      button.addEventListener("click", () => {
+        const img = document.querySelector("img");
+        img.style.width = `${width.value}px`;
+      });
+
+      const cytatyButton = document.getElementById("cytaty");
+      const cytaty = [];
+
+      function addCytat(cytat) {
+        const p = document.createElement("p");
+        p.textContent = cytat;
+        document.querySelector(".right").appendChild(p);
+        cytaty.push(p);
+      }
+
+      cytatyButton.addEventListener("click", () => {
+        const request = new XMLHttpRequest();
+        request.open(
+          "GET",
+          "https://quote-garden.onrender.com/api/v3/quotes/random"
+        );
+        request.send();
+        request.onload = () => {
+          const data = JSON.parse(request.response);
+          addCytat(data.data[0].quoteText);
+        };
+      });
+
+      const usun = document.getElementById("usun");
+
+      usun.addEventListener("click", () => {
+        addCytat("Cytaty zostaną usunięte za 2 sekundy!!!");
+        setTimeout(() => {
+          for (let i = 0; i < cytaty.length; i++) {
+            cytaty[i].remove();
+          }
+        }, 2000);
+      });
+    </script>
   </body>
 </html>
+<style>
+  body {
+    display: flex;
+    height: 100%;
+    margin: 0;
+  }
+  .left,
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+  }
+  * {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .ipt {
+    display: flex;
+    align-items: center;
+  }
+</style>
