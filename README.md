@@ -20,6 +20,6 @@
 | 2     |                                                    | [wykład 4](/wyklady/knurcamp/index.html) |
 | 3     | [zadanie 3](/zadania-tydzien2/zadanie3/index.html) |                                          |
 | 4     | [zadanie 4](/zadania-tydzien2/zadanie4/index.ts)   |                                          |
-| 5     |                                                    |                                          |
+| 5     | [zadanie 6](/zadania-tydzien2/zadanie6/ZADANIE-T2-D6.js)   |                                          |
 | 6     |                                                    |                                          |
 | 7     |                                                    |                                          |
