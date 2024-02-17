@@ -14,12 +14,24 @@
 
 ## Tydzień 2
 
-| Dzień | Zadanie                                            | Wykład                                   |
-| ----- | -------------------------------------------------- | ---------------------------------------- |
-| 1     |                                                    | [wykład 3](/wyklady/wyklad3.md)          |
-| 2     |                                                    | [wykład 4](/wyklady/knurcamp/index.html) |
-| 3     | [zadanie 3](/zadania-tydzien2/zadanie3/index.html) |                                          |
-| 4     | [zadanie 4](/zadania-tydzien2/zadanie4/index.ts)   |                                          |
-| 5     | [zadanie 6](/zadania-tydzien2/zadanie6/ZADANIE-T2-D6.js)   |                                          |
-| 6     |                                                    |                                          |
-| 7     |                                                    |                                          |
+| Dzień | Zadanie                                                  | Wykład                                   |
+| ----- | -------------------------------------------------------- | ---------------------------------------- |
+| 1     |                                                          | [wykład 3](/wyklady/wyklad3.md)          |
+| 2     |                                                          | [wykład 4](/wyklady/knurcamp/index.html) |
+| 3     | [zadanie 3](/zadania-tydzien2/zadanie3/index.html)       |                                          |
+| 4     | [zadanie 4](/zadania-tydzien2/zadanie4/index.ts)         |                                          |
+| 5     | [zadanie 6](/zadania-tydzien2/zadanie6/ZADANIE-T2-D6.js) |                                          |
+| 6     |                                                          |                                          |
+| 7     |                                                          |                                          |
+
+## Tydzień 3
+
+| Dzień | Zadanie | Wykład                          |
+| ----- | ------- | ------------------------------- |
+| 1     |         | [wykład 6](/wyklady/wyklad6.md) |
+| 2     |         |                                 |
+| 3     |         |                                 |
+| 4     |         |                                 |
+| 5     |         |                                 |
+| 6     |         |                                 |
+| 7     |         |                                 |
