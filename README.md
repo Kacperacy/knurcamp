@@ -28,7 +28,7 @@
 
 | Dzień | Zadanie | Wykład                          |
 | ----- | ------- | ------------------------------- |
-| 1     |         | [wykład 6](/wyklady/wyklad6.md) |
+| 1     |         | [wykład 5](/wyklady/wyklad5.md) |
 | 2     |         |                                 |
 | 3     |         |                                 |
 | 4     |         |                                 |

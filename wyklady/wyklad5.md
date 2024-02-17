@@ -233,3 +233,31 @@ function App() {
   );
 }
 ```
+
+## Props
+
+Props - pozwala na przekazywanie danych do komponentu.
+
+**JSX**
+
+```jsx
+// Komponent.jsx
+export function Komponent(props) {
+  return <h1>{props.text}</h1>;
+}
+```
+
+```jsx
+// App.jsx
+import { Komponent } from "./Komponent";
+
+function App() {
+  return <Komponent text="Hello World" />;
+}
+```
+
+**WYNIK W HTML**
+
+```html
+<h1>Hello World</h1>
+```
