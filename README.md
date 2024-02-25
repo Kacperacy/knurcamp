@@ -35,3 +35,7 @@
 | 5     |         |                                 |
 | 6     |         |                                 |
 | 7     |         |                                 |
+
+## Zadania dodatkowe
+
+[link](/zadania-tydzien2/dodatkowe/src/components) 
