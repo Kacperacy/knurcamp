@@ -38,4 +38,4 @@
 
 ## Zadania dodatkowe
 
-[link](/zadania-tydzien2/dodatkowe/src/components) 
+[Rozwiązania](/zadania-tydzien2/dodatkowe/src/components)
